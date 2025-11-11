@@ -1,0 +1,27 @@
+﻿@page "/test"
+
+<PageTitle>
+    Test
+</PageTitle>
+
+<h3>
+    Test
+</h3>
+
+<div>
+    <span>
+        Count = @MyCount
+    </span>
+</div>
+
+<div>
+    <button @onclick="@IncrementCount">
+        Increment
+    </button>
+</div>
+
+@code {
+    private int MyCount = 0;
+
+    private void IncrementCount() => MyCount++;
+}
