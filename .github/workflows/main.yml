@@ -6,6 +6,11 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: write # Grants write access to the repository contents
+  pages: write    # Grants write access to GitHub Pages
+  id-token: write # Required for some GitHub Pages deployments, e.g., with OIDC
+
 jobs:
   deploy-to-github-pages:
     # use ubuntu-latest image to run steps on
